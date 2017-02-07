@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slider 全屏的demo</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<link rel="stylesheet" href="/css/simpleSlider.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body, html {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		ul, ol {
+			list-style: none;
+		}
+		.page-1 {
+			background: #cfcfcf;
+		}
+		.page-2 {
+			background: #343434;
+		}
+		.page-3 {
+			background: #982020;
+		}
+	</style>
+</head>
+<body>
+	<!-- slider类必填 -->
+	<div class="sliderWrap">
+		<!-- <ul class="simpleSliderNav">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+		</ul> -->
+		<ul class="simpleSlider">
+			<li class="page-1">1</li>
+			<li class="page-2">2</li>
+			<li class="page-3">3</li>
+		</ul>
+	</div>
+	<script src="/js/simpleSlider.js"></script>
+	<script>
+		var slider = new simpleSlider({
+			sliderDom: document.querySelector(".simpleSlider"),
+			animation: "transform .4s ease",
+			sensitivity: 68
+		});
+	</script>
+</body>
+</html>
